@@ -250,8 +250,8 @@
     }
 
     .letter {
-      font-size: 0.95rem;
-      font-weight: 300;
+      font-size: 1.15rem;
+      font-weight: 400;
       line-height: 1.75;
       color: var(--muted);
       max-width: 38ch;
@@ -320,7 +320,7 @@
   <section class="step on" id="s0">
     <img class="gift" src="cake.jpg" alt="" />
     <p class="kicker">16 · 09 · 2003</p>
-    <p class="line">Có một món quà nhỏ<br>dành cho Linh...</p>
+    <p class="line">thiệp mừng sinh nhật nè :3</p>
     <button class="btn show" id="start">Mở ra</button>
   </section>
 
@@ -336,13 +336,13 @@
 
   <section class="step" id="s3">
     <p class="line"><span id="t3"></span><span class="cursor"></span></p>
-    <button class="btn" id="b3">Mở quà</button>
+    <button class="btn" id="b3">tiếp</button>
   </section>
 
   <section class="step" id="s4">
     <div class="popper" id="popper">
       <div class="pop-emoji" id="pop">🎉</div>
-      <p class="hint">Chạm 5 lần để nổ confetti</p>
+      <p class="hint">Chạm 3 lần để nổ confetti</p>
       <div class="bar"><div class="fill" id="fill"></div></div>
     </div>
   </section>
@@ -355,13 +355,7 @@
         <h1 class="name">Nguyễn Diệu Linh</h1>
         <p class="meta">16.09.2003 &nbsp;·&nbsp; 23 tuổi</p>
         <div class="rule"></div>
-        <p class="letter">
-          Nhớ những ngày cấp 3 ngồi cùng lớp — lúc căng thẳng, lúc cười không ngớt.
-          Thời gian trôi nhanh, mỗi người một nẻo, nhưng tình bạn thì vẫn còn đây.
-          Chúc Linh tuổi 23 luôn vui, luôn khỏe, việc gì cũng thuận, người thương ở bên,
-          ước mơ thành sự thật. Cười nhiều hơn, lo lắng ít hơn.
-        </p>
-        <p class="sign">từ Clu</p>
+        <p class="letter">chúc Linh sinh nhật vui vẻ nhe</p>
       </article>
     </div>
   </section>
@@ -371,9 +365,9 @@
   <script>
     const song = document.getElementById("song");
     const msgs = [
-      "Linh ơi...",
+      "helo Linh!",
       "Hôm nay là 16 tháng 9.",
-      "Sinh nhật của Nguyễn Diệu Linh."
+      "chúc mừng sinh nhậttttt"
     ];
     const colors = ["#e8b4b8", "#e8c9a0", "#ffffff", "#c9a7d6", "#f3d5c0"];
 
@@ -416,16 +410,17 @@
     const pop = document.getElementById("pop");
     const fill = document.getElementById("fill");
     let taps = 0;
+    const need = 3;
     popper.onclick = () => {
-      if (taps >= 5) return;
+      if (taps >= need) return;
       taps += 1;
-      fill.style.width = (taps * 20) + "%";
-      pop.style.transform = "scale(" + (1 + taps * 0.16) + ")";
+      fill.style.width = (taps * 100 / need) + "%";
+      pop.style.transform = "scale(" + (1 + taps * 0.2) + ")";
       popper.classList.remove("shake");
       void popper.offsetWidth;
       popper.classList.add("shake");
       burst(window.innerWidth / 2, window.innerHeight * 0.42, 18);
-      if (taps === 5) {
+      if (taps === need) {
         pop.style.transform = "scale(0) rotate(160deg)";
         pop.style.opacity = "0";
         finale();
