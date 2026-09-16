@@ -1,7 +1,7 @@
 # Chúc mừng sinh nhật Nguyễn Diệu Linh
 
-Trang web chúc mừng sinh nhật cho **Nguyễn Diệu Linh** (16/9/2003), bạn cấp 3 của Clu.
+Trang chúc mừng sinh nhật cho **Nguyễn Diệu Linh** (16/9/2003).
 
-Dựa trên template [ayusharma/birthday](https://github.com/ayusharma/birthday).
+Dựa trên [sapthesh/New-Birthday](https://github.com/sapthesh/New-Birthday) — glassmorphism, confetti, thiệp 3D — chỉnh lại giao diện và lời tiếng Việt.
 
-Mở link GitHub Pages rồi bấm lần lượt các nút ở dưới màn hình.
+Live: https://clocto.github.io/sinh-nhat-linh/
